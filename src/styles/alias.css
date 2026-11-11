@@ -1,0 +1,13 @@
+/* Optional detail 12.1: a single moving-mass diagram, followed by its q/A rows. */
+#aside-alias .irg-aside-body{grid-template-columns:700px minmax(0,1fr);gap:52px;top:276px;bottom:100px;}
+#aside-alias #alias-columns{width:100%;height:460px;}
+#aside-alias #alias-columns svg{display:block;width:100%;height:100%;overflow:visible;}
+#aside-alias .irg-status{font-size:22px;line-height:1.35;margin:12px 0 0;min-height:60px;text-align:center;}
+#aside-alias .irg-aside-copy h3{font-size:31px;line-height:1.22;margin:13px 0 24px;}
+#aside-alias .irg-aside-copy p{font-size:25px;line-height:1.42;}
+#aside-alias .irg-aside-copy .eyeline{font-size:18px;}
+#aside-alias .irg-aside-copy .irg-note{font-size:22px;line-height:1.4;margin-top:28px;}
+#aside-alias .irg-aside-copy .mathbox{font-size:27px;margin:24px 0;}
+#aside-alias .irg-code{font-size:23px;line-height:1.8;padding:20px 15px 20px 42px;}
+#aside-alias .alias-definition{display:grid;grid-template-columns:48px 1fr;align-items:center;gap:12px;font-size:25px;line-height:1.4;margin:24px 0;}
+#aside-alias .return-link{font-size:18px;}

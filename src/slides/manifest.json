@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "00-cover",
+    "key": "cover",
+    "reveals": 0,
+    "controller": "controller_00_cover"
+  },
+  {
+    "id": 2,
+    "name": "01-interests",
+    "key": "research-overview",
+    "reveals": 2,
+    "controller": "controller_01_interests"
+  },
+  {
+    "id": 3,
+    "name": "02-structure",
+    "key": "structure",
+    "reveals": 3,
+    "controller": "controller_02_structure"
+  },
+  {
+    "id": 4,
+    "name": "03-detection",
+    "key": "inference",
+    "reveals": 3,
+    "controller": "controller_03_detection"
+  },
+  {
+    "id": 5,
+    "name": "04-dynamics",
+    "key": "dynamics",
+    "reveals": 2,
+    "controller": "controller_04_dynamics"
+  },
+  {
+    "id": 6,
+    "name": "05-paine",
+    "key": "paine",
+    "reveals": 1,
+    "controller": "controller_05_paine"
+  },
+  {
+    "id": 7,
+    "name": "06-planted-clique",
+    "key": "planted-clique",
+    "reveals": 2,
+    "controller": "controller_06_planted_clique"
+  },
+  {
+    "id": 8,
+    "name": "07-recovery",
+    "key": "recovery",
+    "reveals": 4,
+    "controller": "controller_07_recovery"
+  },
+  {
+    "id": 9,
+    "name": "08-generation",
+    "key": "generation",
+    "reveals": 1,
+    "controller": "controller_08_generation"
+  },
+  {
+    "id": 10,
+    "name": "09-rank-one",
+    "key": "rank-one",
+    "reveals": 2,
+    "controller": "controller_09_rank_one"
+  },
+  {
+    "id": 11,
+    "name": "10-bottleneck",
+    "key": "bottleneck",
+    "reveals": 10,
+    "controller": "controller_10_bottleneck"
+  },
+  {
+    "id": 12,
+    "name": "11-pair-clocks",
+    "key": "pair-clocks",
+    "reveals": 3,
+    "controller": "controller_11_pair_clocks"
+  },
+  {
+    "id": 13,
+    "name": "12-one-clock",
+    "key": "one-clock",
+    "reveals": 4,
+    "controller": "controller_12_one_clock"
+  },
+  {
+    "id": 14,
+    "name": "13-unified-static",
+    "key": "unified-static",
+    "reveals": 3,
+    "controller": "controller_13_unified_static"
+  },
+  {
+    "id": 15,
+    "name": "14-static-theorem",
+    "key": "static-theorem",
+    "reveals": 2,
+    "controller": "controller_14_static_theorem"
+  },
+  {
+    "id": 16,
+    "name": "15-weight-update",
+    "key": "weight-update",
+    "reveals": 3,
+    "controller": "controller_15_weight_update"
+  },
+  {
+    "id": 17,
+    "name": "16-coupling",
+    "key": "coupling",
+    "reveals": 3,
+    "controller": "controller_16_coupling"
+  },
+  {
+    "id": 18,
+    "name": "17-dynamic-algorithm",
+    "key": "dynamic-algorithm",
+    "reveals": 4,
+    "controller": "controller_17_dynamic_algorithm"
+  },
+  {
+    "id": 19,
+    "name": "18-dynamic-guarantees",
+    "key": "dynamic-guarantees",
+    "reveals": 3,
+    "controller": "controller_18_dynamic_guarantees"
+  },
+  {
+    "id": 20,
+    "name": "19-closing",
+    "key": "closing",
+    "reveals": 3,
+    "controller": "controller_19_closing"
+  }
+]

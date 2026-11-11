@@ -1,0 +1,51 @@
+{
+  "title": "Random graphs at scale: structure, anomalies, and efficient algorithms",
+  "language": "en",
+  "logo": "src/assets/MSCA-PF_logo.png",
+  "logo_alt": "Marie Skłodowska-Curie Actions Postdoctoral Fellowship logo",
+  "cover": {
+    "eyebrow": "RESEARCH SEMINAR",
+    "institution": "UNIVERSITY OF PADOVA",
+    "title_lines": [
+      {
+        "text": "Random graphs"
+      },
+      {
+        "text": "at scale:",
+        "emphasis": true
+      },
+      {
+        "text": "structure, anomalies,"
+      },
+      {
+        "text": "and efficient algorithms"
+      }
+    ],
+    "areas": [
+      "PROBABILITY",
+      "NETWORKS",
+      "ALGORITHMS"
+    ],
+    "speaker_first": "Riccardo",
+    "speaker_last": "Michielan",
+    "seminar": "AIDA Lab seminar",
+    "department": "Department of Information Engineering"
+  },
+  "project": {
+    "supervisor": "Prof. Alessandra Bianchi",
+    "period": "2027–2029",
+    "host": "University of Padua",
+    "website": "https://rmichielan.github.io/site/paine",
+    "website_label": "rmichielan.github.io/site/paine"
+  },
+  "outputs": [
+    "index.html"
+  ],
+  "paper": {
+    "title": "Efficient generation of expected-degree graphs via edge-arrivals",
+    "authors": "Gianlorenzo D'Angelo and Riccardo Michielan",
+    "arxiv_id": "2604.21504",
+    "url": "https://arxiv.org/abs/2604.21504",
+    "note": "Current arXiv preprint; extended manuscript in preparation."
+  }
+}

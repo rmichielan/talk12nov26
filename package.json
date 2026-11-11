@@ -1,0 +1,13 @@
+{
+  "name": "random-graphs-scientific-talk",
+  "private": true,
+  "version": "19.0.0",
+  "description": "Editable offline HTML talk.",
+  "scripts": {
+    "build": "python generate.py",
+    "check": "python generate.py --check"
+  },
+  "devDependencies": {
+    "mathjax-full": "3.2.1"
+  }
+}

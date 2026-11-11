@@ -1,0 +1,111 @@
+/* Part II: PAiNe. Self-contained slide-specific styling, no modifications to
+   the approved Block A layouts. Designed for 16:9 projected displays. */
+.paine-stage{--paine-green:#3d9e81;--paine-dark:#103043;--paine-ink:#244454;--paine-muted:#456575;background:linear-gradient(142deg,#f7fbf9 0%,#eef6f5 100%);color:var(--paine-ink);overflow:hidden;}
+.paine-stage .foot{bottom:3.8%;font-size:15.2px;color:#52717a;z-index:7;}
+.paine-stage .foot strong{color:#2e6e65;}
+.paine-section-label{position:absolute;left:6.7%;top:9%;z-index:6;font-size:16.8px;font-weight:800;letter-spacing:.13em;color:#a7c5c5;transition:color .8s ease,top 1s ease;white-space:nowrap;}
+.paine-section-label span{padding:0 9px;color:#5daca0;}
+.paine-section-label.paine-light{top:5.2%;color:#4b817d;}
+.paine-msca-mark{position:absolute;top:5%;right:6.7%;z-index:5;width:170px;aspect-ratio:592 / 341;background-color:#fff;background-image:__MSCA_PF_LOGO__;background-size:cover;background-position:center;border:1px solid #d8e7e4;border-radius:9px;box-shadow:0 8px 20px #174c4b0a;box-sizing:border-box;opacity:.84;}
+/* Same DOM elements move from PAiNe section cover to content view. */
+.s6 .paine-dark-field{position:absolute;inset:0;background:radial-gradient(ellipse 50% 75% at 77% 44%,#214f56 0%,transparent 77%),linear-gradient(118deg,#0b1c2b,#102d3c 72%,#0c222f);opacity:1;transition:opacity 1150ms ease;pointer-events:none;z-index:0;}
+.s6 .paine-dark-field:after{content:"";position:absolute;inset:0;background-image:linear-gradient(#a0d3cd09 1px,transparent 1px),linear-gradient(90deg,#a0d3cd09 1px,transparent 1px);background-size:38px 38px;mask-image:linear-gradient(90deg,transparent 10%,#000 100%);}
+.s6 .paine-brand{position:absolute;left:6.7%;top:27%;width:54%;z-index:3;transition:top 1150ms cubic-bezier(.22,.74,.18,1),left 1150ms cubic-bezier(.22,.74,.18,1);}
+.s6 .paine-big-title{font-size:188.8px;line-height:.98;font-weight:750;letter-spacing:-.09em;color:#edf7f6;margin:0;transition:font-size 1150ms cubic-bezier(.22,.74,.18,1),color 850ms ease;white-space:nowrap;}
+.s6 .paine-big-title span{color:#6aceaf;}
+.s6 .paine-expansion{font-size:36.8px;font-weight:640;line-height:1.2;color:#e0eff0;margin:20px 0 0;transition:font-size 1150ms ease,color 900ms ease,margin 1150ms ease;white-space:nowrap;}
+.s6 .paine-cover-hook{font-size:29.6px;font-weight:460;color:#9bc6c4;line-height:1.4;margin:34px 0 0;transition:opacity 400ms ease,transform 850ms ease;max-width:560px;}
+.s6 .paine-graphic{position:absolute;left:55.5%;top:23%;width:38%;height:54%;z-index:3;transition:left 1200ms cubic-bezier(.22,.74,.18,1),top 1200ms cubic-bezier(.22,.74,.18,1),width 1200ms cubic-bezier(.22,.74,.18,1),height 1200ms cubic-bezier(.22,.74,.18,1);}
+.s6 .paine-graphic svg{display:block;width:100%;height:91%;overflow:visible;filter:drop-shadow(0 16px 35px #001b2155);}
+.s6 .paine-graphic .paine-art-caption{font-size:16px;color:#a2c8c1;text-align:center;letter-spacing:.12em;font-weight:740;white-space:nowrap;transition:color 850ms ease,font-size 850ms ease;}
+.s6 .paine-art-caption span{color:#72c8ac;padding:0 5px;}
+.s6 .paine-edge-base{stroke:#b6d2d2;stroke-opacity:.50;transition:stroke 900ms ease,stroke-opacity 900ms ease;}
+.s6 .paine-edge-signal{stroke:#69c9a7;transition:stroke 900ms ease;}
+.s6 .paine-node-base{fill:#b6d2d2;opacity:.85;transition:fill 900ms ease;}
+.s6 .paine-node-signal{fill:#69c9a7;transition:fill 900ms ease;}
+.s6 .paine-hidden-boundary{fill:#429a7a;fill-opacity:.09;stroke:#76bda6;stroke-width:2;stroke-opacity:.55;stroke-dasharray:6 8;}
+.s6 .paine-details,.s6 .paine-project-info{opacity:0;visibility:hidden;transform:translateY(15px);transition:opacity 650ms ease,transform 800ms ease,visibility 650ms ease;}
+.s6 .paine-details{position:absolute;left:6.7%;top:37%;width:60%;z-index:4;}
+.paine-question-kicker{font-size:16.64px;letter-spacing:.11em;color:#22876f;font-weight:800;}
+.s6 .paine-details h3{font-size:45.6px;line-height:1.15;letter-spacing:-.045em;margin:12px 0 11px;color:#254b51;font-weight:750;max-width:800px;}
+.s6 .paine-details h3 em{font-style:normal;color:#2e937a;}
+.s6 .paine-lead{font-size:27.68px;line-height:1.31;color:#466875;margin:0;max-width:790px;}
+.s6 .paine-project-info{position:absolute;left:6.7%;right:6%;top:72%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;z-index:4;}
+.s6 .paine-project-info article{min-width:0;min-height:94px;padding:13px 16px;border:1px solid #cddfdc;border-top:4px solid #68b39b;border-radius:9px;background:#ffffffdf;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;gap:7px;}
+.s6 .paine-project-info article>span{color:#308b75;font-size:13.92px;font-weight:810;letter-spacing:.07em;}
+.s6 .paine-project-info article>strong{color:#244956;font-size:20.48px;line-height:1.2;font-weight:720;}
+.s6 .paine-project-info a{color:#287c69;text-decoration-thickness:1px;text-underline-offset:3px;overflow-wrap:normal;word-break:normal;}
+.s6 .foot{color:#b7d2d1;transition:color .9s ease;}
+.s6 .foot strong{color:#6dbea4;transition:color .9s ease;}
+.s6[data-step="1"] .paine-dark-field{opacity:0;}
+.s6[data-step="1"] .paine-section-label{top:5%;color:#498078;}
+.s6[data-step="1"] .paine-brand{top:10%;}
+.s6[data-step="1"] .paine-big-title{font-size:75.2px;color:#214c51;}
+.s6[data-step="1"] .paine-expansion{font-size:28px;color:#3d6d72;margin:6px 0 0;}
+.s6[data-step="1"] .paine-cover-hook{opacity:0;transform:translateY(-20px);}
+.s6[data-step="1"] .paine-graphic{left:72%;top:33%;width:21%;height:29%;}
+.s6[data-step="1"] .paine-graphic .paine-art-caption{color:#4f8278;font-size:16px;letter-spacing:.035em;white-space:normal;line-height:1.35;}
+.s6[data-step="1"] .paine-edge-base{stroke:#668b90;stroke-opacity:.58;}
+.s6[data-step="1"] .paine-node-base{fill:#648f94;}
+.s6[data-step="1"] .paine-edge-signal{stroke:#2c9475;}
+.s6[data-step="1"] .paine-node-signal{fill:#2c9475;}
+.s6[data-step="1"] .paine-details,.s6[data-step="1"] .paine-project-info{opacity:1;visibility:visible;transform:none;transition-delay:330ms;}
+.s6[data-step="1"] .foot{color:#587c7b;}
+.s6[data-step="1"] .foot strong{color:#287c69;}
+/* Slide 7: planted clique baseline and same-graph comparison. */
+.s7 .top,.s8 .top{top:12%;left:6.7%;right:5.8%;}
+.s7 .top h2,.s8 .top h2{font-size:52.8px;}
+.s7 .top .sub,.s8 .top .sub{font-size:25.92px;max-width:92%;}
+.s7 .clique-math-card{position:absolute;left:6.7%;top:31%;width:31%;height:44%;background:#ffffffe5;border:1px solid #d8e8e4;border-radius:14px;box-shadow:0 17px 38px #123e450a;padding:23px 25px;box-sizing:border-box;}
+.s7 .clique-math{font-family:Georgia,'Times New Roman',serif;font-size:29px;color:#295366;margin:15px 0 10px;white-space:nowrap;}
+.s7 .clique-math-card>p{font-size:24.16px;line-height:1.35;color:#466776;margin:0;}
+.s7 .clique-math-divider{height:1px;background:#dbe9e5;margin:18px 0 18px;}
+.s7 .clique-steps{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.s7 .clique-steps b{display:block;font-size:22.4px;color:#276e65;margin-bottom:5px;}
+.s7 .clique-steps span{display:block;font-size:18.72px;color:#52717b;line-height:1.28;}
+.s7 .clique-visual{position:absolute;left:40%;right:6%;top:31%;height:44%;display:flex;align-items:stretch;gap:10px;}
+.s7 .clique-graph-card{flex:1;min-width:0;position:relative;overflow:hidden;background:linear-gradient(135deg,#f5faf9,#edf5f3);border:1px solid #d8e7e4;border-radius:14px;opacity:.16;transition:opacity 450ms ease,border-color 450ms ease,background 450ms ease;}
+.s7 .clique-graph-card:first-child{flex:.9;}
+.s7[data-step="1"] .clique-graph-card,.s7[data-step="2"] .clique-graph-card{opacity:1;}
+.s7 .clique-graph-label{position:absolute;left:13px;top:13px;font-size:15.2px;color:#4f7b78;font-weight:800;letter-spacing:.06em;}
+.s7 .clique-graph-card svg{position:absolute;left:3%;top:17%;width:94%;height:68%;}
+.s7 .clique-graph-bottom{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:18.4px;color:#496f76;font-weight:670;}
+.s7 .clique-arrow{display:flex;align-items:center;justify-content:center;color:#3c947f;font-size:32px;font-weight:780;flex:0 0 28px;}
+.s7 .clique-baseline-edges line{stroke:#638f99;stroke-width:1.9;stroke-opacity:.58;}
+.s7 .clique-ordinary{fill:#83a4aa;stroke:#f4faf9;stroke-width:1;}
+.s7 .clique-planted-edges{stroke:#219c78;stroke-width:4.3;stroke-linecap:round;filter:drop-shadow(0 0 2px #30a98466);transition:opacity 450ms ease;}
+.s7 .clique-member{fill:#27aa83;stroke:white;stroke-width:1.3;transition:opacity 450ms ease;}
+.s7[data-step="0"] .clique-planted-edges,.s7[data-step="0"] .clique-member{opacity:0;}
+.s7[data-step="1"] .clique-planted,.s7[data-step="2"] .clique-planted{border-color:#8ecdb6;background:#f2fbf6;}
+.s7 .clique-geometry-note{position:absolute;left:6.7%;right:6%;top:79%;height:13%;display:flex;align-items:center;gap:20px;border-left:5px solid #4f9f85;padding:12px 22px;background:#e7f4ef;border-radius:0 12px 12px 0;box-sizing:border-box;opacity:0;transform:translateY(9px);transition:opacity 550ms ease,transform 550ms ease;}
+.s7[data-step="2"] .clique-geometry-note{opacity:1;transform:none;}
+.s7 .geometry-icon{flex:0 0 60px;height:60px;}
+.s7 .geometry-icon svg{width:100%;height:100%;overflow:visible;fill:#52a88d;stroke:#277c70;stroke-width:2;}
+.s7 .geometry-icon svg circle{stroke-width:0;}
+.s7 .clique-geometry-note strong{display:block;color:#286d5c;font-size:24px;line-height:1.18;}
+.s7 .clique-geometry-note p{font-size:17.28px;line-height:1.2;margin:4px 0 0;color:#436e69;}
+.s7 .clique-geometry-note a{color:#286d5c;text-decoration-thickness:1px;text-underline-offset:2px;}
+/* Slide 8: PAiNe research agenda. Visual language from the site and project objectives. */
+.s8 .paine-agenda{position:absolute;left:6.7%;right:6%;top:31%;height:41%;display:grid;grid-template-columns:minmax(0,1fr) 22px minmax(0,1fr) 22px minmax(0,1fr) 22px minmax(0,1fr);gap:8px;align-items:stretch;}
+.s8 .agenda-card{min-width:0;display:flex;flex-direction:column;align-items:flex-start;position:relative;border:1px solid #d7e6e0;border-top:5px solid var(--agenda-accent);background:#ffffffde;border-radius:13px;box-shadow:0 14px 30px #174c4b0a;padding:15px 20px 18px;box-sizing:border-box;transition:opacity .4s ease,border-color .4s ease,box-shadow .4s ease;}
+.s8 .agenda-model{--agenda-accent:#25977b;}
+.s8 .agenda-limits{--agenda-accent:#9173bb;}
+.s8 .agenda-algorithms{--agenda-accent:#ba894c;}
+.s8 .agenda-validation{--agenda-accent:#527f9f;}
+.s8 .agenda-card:not(.agenda-model){opacity:.16;}
+.s8[data-step="1"] .agenda-limits,
+.s8[data-step="2"] .agenda-limits,.s8[data-step="2"] .agenda-algorithms,
+.s8[data-step="3"] .agenda-limits,.s8[data-step="3"] .agenda-algorithms,.s8[data-step="3"] .agenda-validation,
+.s8[data-step="4"] .agenda-limits,.s8[data-step="4"] .agenda-algorithms,.s8[data-step="4"] .agenda-validation{opacity:1;box-shadow:0 15px 34px #174c4b12;}
+.s8 .agenda-index{display:block;color:var(--agenda-accent);font-size:16.48px;font-weight:800;letter-spacing:.08em;}
+.s8 .agenda-art{display:block;width:100%;height:128px;margin:11px auto 10px;flex-shrink:0;}
+.s8 .agenda-card h3{font-size:32px;line-height:1.12;letter-spacing:-.035em;color:#274d55;margin:1px 0 8px;font-weight:760;}
+.s8 .agenda-card p{font-size:22.72px;line-height:1.25;color:#466978;margin:0;max-width:100%;}
+.s8 .agenda-card p strong{font-weight:740;color:#26685e;}
+.s8 .agenda-arrow{display:flex;justify-content:center;align-items:center;color:#68ac99;font-size:35px;font-weight:750;}
+.s8 .paine-agenda-bottom{position:absolute;left:6%;right:6%;top:76%;height:12.8%;display:flex;justify-content:center;opacity:0;transform:translateY(10px);transition:opacity .45s ease,transform .45s ease;}
+.s8[data-step="4"] .paine-agenda-bottom{opacity:1;transform:none;}
+.s8 .agenda-gap{width:min(100%,760px);background:#eaf5ef;border:1px solid #cde3d9;border-radius:11px;padding:10px 17px;box-sizing:border-box;min-width:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
+.s8 .paine-agenda-bottom span{display:block;color:#347d6b;font-size:15.2px;font-weight:810;letter-spacing:.085em;margin-bottom:5px;}
+.s8 .agenda-gap strong{font-size:25.6px;line-height:1.19;font-weight:760;color:#2b5955;display:block;}
+.s8 .agenda-gap em{font-style:normal;color:#ac815e;padding:0 5px;}

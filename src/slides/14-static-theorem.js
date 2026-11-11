@@ -1,0 +1,1 @@
+const controller_14_static_theorem=IRGScenes.create(15,root=>({root}),()=>{});

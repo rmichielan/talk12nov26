@@ -1,0 +1,40 @@
+<section id="aside-alias" class="stage irg-stage irg-aside" aria-hidden="true" inert data-parent="13" data-step="0">
+<div class="line-label">OPTIONAL DETAIL / 12.1</div>
+<header class="top"><h2>How can we sample endpoints in constant time?</h2><p class="sub">Rearrange the masses once. Then use two uniform draws.</p></header>
+<div class="irg-aside-body">
+ <div class="irg-aside-left"><div id="alias-columns"></div><p class="irg-status" id="alias-status"></p></div>
+ <div class="irg-aside-copy">
+  <div class="irg-panel" data-panel="0">
+   <p class="eyeline">WALKER&ndash;VOSE / INITIAL MASSES</p><h3>Unequal weights.<br>Equal-width columns.</h3>
+   <div class="mathbox"><span class="tex" data-math="L=40,\qquad n=10"></span></div>
+   <div class="mathbox"><span class="tex" data-math="s_i=n\pi(i)=\frac{w_i}{4}"></span></div>
+   <p>The dashed line marks height 1. Transfer surplus mass to fill the shorter columns.</p>
+   <p class="irg-note">The total mass remains 10 throughout the construction.</p>
+  </div>
+  <div class="irg-panel" data-panel="1">
+   <p class="eyeline">ONE PAIRING / FOLLOW THE MASS</p><h3>Fill one short column.</h3>
+   <p>A piece moves from the top of a surplus column into a deficit.</p>
+   <div class="alias-definition"><span class="tex" data-math="q_i"></span><span>Height of the column's own part.</span></div>
+   <div class="alias-definition"><span class="tex" data-math="A_i"></span><span>Index of the supplying column.</span></div>
+   <p class="irg-note">Record these entries when the piece lands. That column is now final.</p>
+  </div>
+  <div class="irg-panel" data-panel="2">
+   <p class="eyeline">REPEAT / COMPLETE THE TABLE</p><h3>Every pairing finalises a column.</h3>
+   <p>Continue with the remaining deficits and surpluses. Each finished column has at most two parts.</p>
+   <div class="mathbox"><span class="tex" data-math="\text{Build: }O(n)\qquad\text{Space: }O(n)"></span></div>
+   <p class="irg-note">At most <span class="tex" data-math="n-1"></span> pairings, with constant work per pairing.</p>
+  </div>
+  <div class="irg-panel" data-panel="3">
+   <p class="eyeline">SAMPLE / NO SEARCH</p><h3>One column. One cutoff test.</h3>
+   <ol class="irg-code">
+    <li><span class="tex" data-math="I\sim\operatorname{Unif}\{1,\ldots,n\}"></span></li>
+    <li><span class="tex" data-math="V\sim\operatorname{Unif}[0,1]"></span>, independently</li>
+    <li><b>return</b> <span class="tex" data-math="I"></span> if <span class="tex" data-math="V\le q_I"></span>, else <span class="tex" data-math="A_I"></span></li>
+   </ol>
+   <div class="mathbox"><span class="tex" data-math="\text{Build: }O(n)\qquad\text{Sample: }O(1)"></span></div>
+  </div>
+ </div>
+</div>
+<span hidden id="alias-i-symbol"><span class="tex" data-math="i"></span></span><span hidden id="alias-q-symbol"><span class="tex" data-math="q_i"></span></span><span hidden id="alias-a-symbol"><span class="tex" data-math="A_i"></span></span>
+<footer class="foot">12.1 / ALIAS SAMPLING</footer><button class="return-link" data-close-aside>Return to the main slide &uarr;</button>
+</section>

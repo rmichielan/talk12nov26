@@ -1,0 +1,328 @@
+/* Shared dynamic-event colors. Red always means deletion, green insertion. */
+.irg-stage{--irg-add:#159c7d;--irg-remove:#b83e4b;--irg-remove-bg:#fbeaec;--irg-keep:#8199a8;}
+/* Block III: scoped, shared layouts on the existing 1600 x 900 stage.
+   Content, drawing, and animation state are separated; no overrides to slides 1-8. */
+.irg-stage{--accent:#b87838;--accent-light:#fbefdf;--body-size:29px;color:#213b4e;}
+.irg-stage .line-label{color:#996632;}
+.irg-stage .line-label::before{background:#c2874b;}
+.irg-stage h2{font-size:52px;line-height:1.12;letter-spacing:-.04em;}
+.irg-stage h3{font-size:32px;line-height:1.2;letter-spacing:-.024em;margin:0 0 20px;font-weight:680;}
+.irg-stage p{font-size:27px;line-height:1.4;margin:13px 0;color:#3c586b;}
+.irg-stage .sub{font-size:25px;}
+.irg-stage .tex{display:inline-block;vertical-align:middle;}
+.irg-stage .tex svg{vertical-align:middle;overflow:visible;max-width:100%;height:auto;}
+.irg-stage .mathbox{font-size:28px;line-height:1.5;margin:20px 0;}
+.irg-stage .mathbox .tex{max-width:100%;}
+.irg-stage .irg-note{font-size:21px;line-height:1.36;color:#536c7e;}
+.irg-stage .irg-source{font-size:18px;color:#607584;}
+.irg-stage .eyeline{color:#a96e32;font-size:19px;letter-spacing:.11em;}
+.irg-panel{position:absolute;inset:0;opacity:0;visibility:hidden;pointer-events:none;transition:opacity 300ms ease;}
+.irg-panel.active{visibility:visible;opacity:1;pointer-events:auto;}
+
+.irg-stage .foot{font-size:15px;}
+.irg-two-col{position:absolute;left:104px;right:104px;top:270px;bottom:135px;display:grid;grid-template-columns:1.08fr 1fr;gap:64px;}
+.irg-col{position:relative;min-width:0;}
+.irg-question{font-size:38px;line-height:1.22;font-weight:650;letter-spacing:-.026em;color:#935f2b;margin:25px 0;}
+.irg-question.small{font-size:32px;}
+.irg-bottom-line{position:absolute;left:104px;right:104px;bottom:85px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid #d7e2e7;padding-top:17px;font-size:21px;color:#4e6675;}
+.irg-bottom-line .kbdhint{font-size:18px;color:#7a6d5b;white-space:nowrap;}
+.irg-code{list-style:none;counter-reset:line;display:block;border-left:3px solid #cd975b;background:#ffffffba;padding:20px 20px 20px 48px;margin:18px 0;color:#284558;font-family:'Cascadia Code',Consolas,monospace;font-size:24px;line-height:1.64;}
+.irg-code li{counter-increment:line;position:relative;padding:1px 0;white-space:normal;}
+.irg-code li::before{content:counter(line);position:absolute;left:-30px;top:2px;color:#9aabaf;font-size:17px;}
+.irg-code li.current{background:#fff0cf;}
+.irg-code b{color:#a8682c;}
+.irg-code .tex{font-size:.95em;}
+.graph-host{height:380px;width:100%;min-width:0;}
+.graph-host>svg{display:block;width:100%;height:100%;overflow:visible;}
+.irg-graph circle{transition:r 430ms ease,fill 250ms ease;}
+.irg-graph line{transition:stroke 160ms ease;}
+.irg-graph-key{display:flex;justify-content:center;gap:25px;font-size:20px;color:#4c6374;}
+.irg-graph-key span:first-child{color:var(--irg-add);}.irg-graph-key span:nth-child(2){color:var(--irg-remove);}
+.irg-status{font-size:22px!important;min-height:32px;text-align:center;color:#4a6576!important;font-variant-numeric:tabular-nums;margin:10px 0!important;}
+.center-caption{text-align:center;font-size:23px!important;}
+.aside-link,.demo-play,.return-link,.update-select button{font-family:inherit;cursor:pointer;border:1px solid #d5b58b;border-radius:7px;padding:10px 17px;background:#fffbf4;color:#97612e;font-size:22px;line-height:1.2;}
+.aside-link:hover,.demo-play:hover,.return-link:hover{background:#f8e9d3;}
+button:focus-visible{outline:3px solid #b27c3e;outline-offset:3px;}
+/* 08: section cover becomes content on the next reveal. */
+.irg-opening-field{position:absolute;inset:0;background:radial-gradient(ellipse 52% 72% at 78% 46%,#312c46 0%,transparent 80%),linear-gradient(118deg,#0b1c2b,#132638 72%,#102030);opacity:1;transition:opacity 1000ms ease;pointer-events:none;}
+.irg-opening-field:after{content:"";position:absolute;inset:0;background-image:linear-gradient(#b7b0d409 1px,transparent 1px),linear-gradient(90deg,#b7b0d409 1px,transparent 1px);background-size:40px 40px;mask-image:linear-gradient(90deg,transparent 8%,#000 100%);}
+.irg-opener .top{top:252px;width:830px;right:auto;transition:top 1000ms var(--ease),width 1000ms var(--ease);}
+.irg-opener h2{font-size:74px;line-height:1.08;color:#edf2f7;transition:font-size 1000ms var(--ease),color 850ms ease;}
+.irg-opening-accent{color:#e1aa70;white-space:nowrap;}
+.irg-opener .top .sub{font-size:24px;color:#adc3d0;transition:color 850ms ease;}
+.irg-opener .line-label{color:#e0af7d;}
+.irg-opening-art{position:absolute;left:930px;right:95px;top:250px;text-align:center;transition:transform 1000ms var(--ease);}
+.irg-opening-art .graph-host{height:410px;}
+.irg-opening-weights{display:flex;flex-direction:column;align-items:center;gap:10px;font-size:26px;color:#d6cde8;margin-top:23px;transition:color 850ms ease;}
+.irg-opening-weights>.tex{max-width:100%;}
+.irg-opening-copy{position:absolute;left:104px;top:533px;width:730px;transition:opacity 300ms;}
+.irg-opening-copy p{font-size:29px;color:#c0d0dc;}
+.irg-opening-copy .eyeline{color:#dfab75;font-size:19px;}
+.irg-opening-details{position:absolute;left:104px;top:310px;width:730px;visibility:hidden;opacity:0;transition:opacity 500ms ease;}
+.irg-opening-details .mathbox{font-size:32px;margin-top:15px;}
+.irg-opening-details .irg-question{font-size:38px;margin:26px 0;}
+.irg-opener .foot{color:#aabfcf;transition:color 850ms ease;}
+.irg-opener .foot strong{color:#e0af7d;}
+.irg-opener[data-step="0"] .irg-graph line{stroke:#a49cc6;opacity:.67;}
+.irg-opener[data-step="1"] .irg-opening-field{opacity:0;}
+.irg-opener[data-step="1"] .top{top:110px;width:1390px;}
+.irg-opener[data-step="1"] h2{font-size:50px;color:#223a4c;}
+.irg-opener[data-step="1"] .irg-opening-accent{color:#a16a32;}
+.irg-opener[data-step="1"] .sub{color:#4f6d7f;}
+.irg-opener[data-step="1"] .line-label{color:#996632;}
+.irg-opener[data-step="1"] .irg-opening-copy{opacity:0;visibility:hidden;}
+.irg-opener[data-step="1"] .irg-opening-details{opacity:1;visibility:visible;transition-delay:350ms;}
+.irg-opener[data-step="1"] .irg-opening-art{transform:translateY(24px) scale(.94);transform-origin:50% 0;}
+.irg-opener[data-step="1"] .irg-opening-weights{color:#374e63;}
+.irg-opener[data-step="1"] .foot{color:#557285;}
+.irg-opener[data-step="1"] .foot strong{color:#304a5d;}
+/* 09: definition first; models, comparison and plot enter together. */
+.irg-model-definition{position:absolute;left:104px;right:104px;top:250px;display:grid;grid-template-columns:1fr 340px;gap:50px;align-items:center;}
+.irg-model-definition .mathbox{font-size:31px;margin:9px 0;}
+.irg-model-definition .irg-definition-aside{font-size:23px;line-height:1.45;margin:0;border-left:2px solid #d3dfe5;padding-left:24px;}
+.irg-model-cards{position:absolute;left:104px;right:104px;top:368px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;opacity:0;visibility:hidden;transition:opacity 400ms ease,visibility 400ms;}
+#s10:not([data-step="0"]) .irg-model-cards{opacity:1;visibility:visible;}
+.irg-model-cards article{--model-color:#ad7131;border-top:3px solid var(--model-color);background:#ffffffb5;border-radius:5px;padding:20px 24px 12px;}
+.irg-model-cards article:nth-child(2){--model-color:#8665ab;}
+.irg-model-cards article:nth-child(3){--model-color:#32888c;}
+.irg-model-cards small{font-size:20px;font-weight:750;color:var(--model-color);letter-spacing:.08em;}
+.irg-model-cards h3{font-size:25px;margin:7px 0 14px;color:var(--model-color);}
+.irg-model-cards .mathbox{font-size:27px;}
+.irg-model-bottom{position:absolute;left:104px;right:104px;top:590px;bottom:88px;display:grid;grid-template-columns:1fr 450px;gap:45px;opacity:0;visibility:hidden;transition:opacity 400ms ease,visibility 400ms;}
+#s10:not([data-step="0"]) .irg-model-bottom{opacity:1;visibility:visible;}
+.irg-model-relation{position:relative;min-width:0;padding-top:16px;}
+.irg-model-relation>.irg-panel{top:16px;bottom:auto;}
+.irg-model-relation .mathbox{font-size:28px;}
+.irg-model-relation>p{position:absolute;top:118px;font-size:24px;max-width:820px;}
+.irg-curve svg{width:100%;height:100%;overflow:visible;}
+/* matrix slides */
+.irg-workbench{position:absolute;left:104px;right:104px;top:257px;height:515px;display:grid;grid-template-columns:1fr 570px;gap:85px;}
+.irg-bench-left,.irg-bench-right{position:relative;min-width:0;}
+.irg-bench-left .graph-host{height:420px;}
+.irg-matrix{width:500px;height:500px;display:block;margin:auto;overflow:visible;}
+.irg-bench-right .irg-status{margin-top:0!important;}
+#s11 .irg-workbench{top:258px;height:540px;grid-template-columns:minmax(0,1fr) 570px;gap:60px;}
+#s11 .irg-bench-left .graph-host{height:470px;}
+#s11 .irg-matrix{width:530px;height:530px;transition:opacity 300ms;}
+#s11 .irg-bench-left .algorithm-code{font-size:24px;line-height:1.55;padding:18px 15px 18px 47px;}
+#s11 .algorithm-code .indent-1{padding-left:22px;}
+#s11 .algorithm-code .indent-2{padding-left:44px;}
+#s11 .algorithm-code .indent-3{padding-left:66px;}
+#s11 .algorithm-code li::before{left:-29px;}
+#s11 .algorithm-code li.current{background:#fff0d7;}
+#s11 #mh-code{font-size:23px;line-height:1.48;}
+#s11 #mh-code .tex{font-size:.94em;}
+#s11 .sort-instruction{font-size:35px;line-height:1.3;margin-top:45px;max-width:630px;}
+#s11 .sort-equation{font-size:30px;margin-top:32px;}
+#s11[data-step="6"] .sort-equation{opacity:0;}
+#s11 [data-panel="10"] .irg-question{margin-top:100px;max-width:690px;}
+#s11[data-step="10"] .irg-matrix{opacity:.22;}
+.matrix-pointers path{filter:drop-shadow(0 1px 1px #3c2b2920);}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+#s11 .irg-bench-left .irg-panel h3{margin-top:14px;}
+
+
+#s12 .irg-workbench{top:235px;height:490px;gap:100px;}
+#s12 .irg-bench-left .graph-host{height:366px;}
+.clock-equation .mathbox{font-size:29px;margin:12px 0;}
+.irg-timeline{position:absolute;left:104px;top:695px;right:104px;display:flex;gap:18px;align-items:center;font-size:21px;color:#496677;}
+.irg-time-track{height:4px;position:relative;background:#cdd9df;flex:1;}
+.irg-time-track b{position:absolute;width:13px;height:13px;top:-5px;left:0;background:#c78a47;border-radius:50%;transform:translateX(-50%);}
+.irg-timeline strong{font-size:23px;width:100px;font-variant-numeric:tabular-nums;}
+.irg-clocks-caption{position:absolute;left:104px;right:104px;top:739px;height:110px;text-align:center;}
+.irg-clocks-caption .mathbox{font-size:29px;margin:4px 0;}
+.irg-clocks-caption p{font-size:23px;margin:6px 0;}
+.irg-clocks-caption .irg-question{font-size:34px;margin:20px 0;}
+/* Clock stream */
+.irg-clock-layout{position:absolute;left:104px;right:104px;top:263px;bottom:141px;display:grid;grid-template-columns:1fr 1.1fr;gap:55px;}
+.irg-clock-graph .graph-host{height:430px;}
+.irg-clock-mechanism{position:relative;min-width:0;}
+.global-clock-host{width:210px;height:210px;margin:0 auto;}
+.big-clock{width:100%;height:100%;}.big-clock.ringing{filter:drop-shadow(0 0 12px #e3ad52);}
+#s13 [data-panel="1,2"]>.mathbox{font-size:27px;text-align:center;margin:3px 0 18px;}
+.many-clocks{height:390px;display:grid;grid-template-columns:repeat(9,1fr);gap:10px;align-content:center;}
+.many-clocks svg{width:100%;height:58px;}
+.endpoint-slot{display:flex;gap:14px;align-items:center;margin:22px 0;}
+.slot-name{font:italic 25px Georgia;color:#77562f;}.slot-result{width:35px;font-size:30px;text-align:center;color:#98622d;}
+.slot-window{position:relative;flex:1;overflow:hidden;padding:16px 0;}
+.slot-track{height:43px;display:flex;width:100%;border-radius:4px;overflow:hidden;}
+.slot-segment{display:grid;place-items:center;flex:none;font-size:19px;font-weight:700;color:white;box-shadow:inset -1px 0 #ffffff65;}
+.slot-pointer{position:absolute;top:0;left:0;width:3px;height:74px;background:#283e4e;transition:left 300ms cubic-bezier(.18,.7,.2,1);}
+.slot-pointer:before{content:'';position:absolute;top:-1px;left:-5px;border-left:6px solid transparent;border-right:6px solid transparent;border-top:9px solid #283e4e;}
+.irg-clock-mechanism [data-panel="3"]{padding-top:65px;}
+.irg-clock-mechanism [data-panel="3"] .mathbox{font-size:29px;margin:35px 0;}
+.irg-clock-mechanism [data-panel="4"] .irg-code{font-size:25px;}
+/* Unified static */
+.irg-static-vis .graph-host{height:266px;}
+.irg-static-notes{position:relative;height:230px;}
+.irg-static-notes p{font-size:24px;}
+.irg-static-notes .mathbox{font-size:26px;margin:10px 0;}
+#s14 .irg-code{font-size:23px;line-height:1.64;padding-top:14px;padding-bottom:14px;}
+#s14 .algorithm-code .indent-1{padding-left:18px;}
+#s14 .algorithm-code .indent-2{padding-left:36px;}
+#s14 .algorithm-code .tex{font-size:.91em;}
+#s14 .irg-col>.irg-panel>.irg-note{font-size:20px;line-height:1.35;margin-top:12px;}
+#s14 .pair-partition .mathbox{font-size:23px;margin:10px 0;}
+#s14 .pair-partition p{font-size:21px;}
+#s14 .partition-acceptance{visibility:hidden;opacity:0;transition:opacity 300ms;}
+#s14[data-step="3"] .partition-acceptance{visibility:visible;opacity:1;}
+#s14 .irg-status{font-size:21px;line-height:1.25;min-height:52px;}
+#s15 .irg-theorem-area .irg-note{font-size:21px;line-height:1.4;}
+
+/* Formal statements */
+.irg-theorem-area{position:absolute;left:152px;right:152px;top:275px;bottom:118px;border-left:4px solid #c78a47;background:#ffffffbd;border-radius:0 14px 14px 0;box-shadow:0 15px 45px #34546b07;}
+.irg-theorem-area>.irg-panel{padding:33px 43px;}
+.theorem-label{font-size:19px;color:#9f692f;font-weight:750;letter-spacing:.08em;margin-bottom:25px;}
+.irg-theorem-area p{font-size:28px;line-height:1.45;}
+.irg-theorem-area .mathbox{font-size:31px;margin:25px 0;}
+.irg-theorem-area .irg-note{font-size:21px;margin-top:27px;}
+#s19 .irg-theorem-area{left:112px;right:112px;}
+#s19 [data-panel="1"] .mathbox{font-size:27px;margin:22px 0;}
+#s19 [data-panel="1"] p{font-size:25px;}
+#s19 [data-panel="3"] .mathbox{font-size:30px;}
+#s19 .irg-question.small{font-size:32px;}
+/* Dynamic block */
+.irg-dynamic-layout{position:absolute;left:104px;right:104px;top:264px;bottom:148px;display:grid;grid-template-columns:650px 1fr;gap:60px;}
+.irg-dynamic-layout .graph-host{height:450px;}
+.irg-dynamic-copy{position:relative;}
+.direction-card{font-size:23px;background:#e6f4ec;border-left:3px solid #38a181;border-radius:3px;padding:17px 22px;margin-bottom:20px;}
+.direction-card.secondary{background:var(--irg-remove-bg);border-color:var(--irg-remove);color:#9d3541;}
+.direction-card .mathbox{font-size:28px;margin:14px 0 0;}
+.irg-dynamic-copy .demo-play{margin-top:18px;}
+.irg-table{border-collapse:collapse;width:100%;font-size:24px;line-height:1.4;margin:24px 0;}
+.irg-table td,.irg-table th{padding:17px 10px;border-bottom:1px solid #d6e2e7;text-align:left;}
+.irg-table th{font-size:21px;color:#577181;font-weight:650;}
+.bernoulli-track{height:110px;margin-top:30px;}
+.bernoulli-track svg{width:100%;height:100%;}
+#s17 .irg-col:first-child .mathbox{font-size:24px;text-align:center;}
+#s17 .irg-col:nth-child(2){padding-top:20px;}
+#s17 .irg-col:nth-child(2) .mathbox{font-size:28px;}
+#s18 .irg-two-col{grid-template-columns:1.14fr 1fr;gap:60px;top:260px;}
+#s18 .irg-code{font-size:23px;line-height:1.42;margin:12px 0;padding-top:13px;padding-bottom:13px;}
+#s18 [data-panel="0"] .mathbox{font-size:27px;}
+#s18 [data-panel="1"] .mathbox{font-size:26px;}
+#s18 [data-panel="2"] .mathbox{font-size:28px;}
+#s18 [data-panel="4"] .mathbox{font-size:28px;}
+#s18 .graph-host.compact{height:328px;}
+.edge-array{display:flex;flex-wrap:wrap;align-content:start;gap:6px;min-height:96px;margin-top:12px;}
+.edge-array span{border:1px solid #c3d5de;background:#fff;padding:7px 8px;border-radius:4px;font-size:18px;color:#526c7e;font-variant-numeric:tabular-nums;}
+.edge-array span.skipped{opacity:.3;}.edge-array span.candidate{border-color:#c48c46;background:#fcedd3;color:#8b5625;}.edge-array span.deleted{text-decoration:line-through;color:var(--irg-remove);background:var(--irg-remove-bg);border-color:#dc9ba4;}
+.update-select{display:flex;gap:12px;justify-content:center;margin-top:10px;}
+.update-select button{font-size:18px;padding:6px 14px;}.update-select button.selected{background:#e7cfb0;}
+/* Vertical details */
+.irg-aside{background:linear-gradient(135deg,#f9f5ee,#eef4f7);z-index:15;}
+.irg-aside .top h2{font-size:49px;}
+.irg-aside-body{position:absolute;left:104px;right:104px;top:270px;bottom:120px;display:grid;grid-template-columns:1.15fr 1fr;gap:65px;}
+.irg-aside-left,.irg-aside-copy{position:relative;min-width:0;}
+.irg-aside-copy .mathbox{font-size:29px;}.irg-aside-copy p{font-size:26px;}
+.return-link{position:absolute;right:104px;bottom:35px;font-size:20px;}
+#alias-bars{height:172px;}
+#alias-bars svg{height:100%;width:100%;}
+#alias-columns{height:265px;}
+#alias-columns svg{height:100%;width:100%;}
+#ebus-buckets{display:flex;flex-direction:column;gap:18px;margin-top:0;}
+.bucket-row{border:1px solid #d3dfe5;background:#fff;border-radius:9px;display:flex;align-items:center;min-height:102px;padding:10px 16px;gap:14px;}
+.bucket-label{font-size:23px;color:#7e5e3a;flex:0 0 83px;}
+.bucket-nodes{display:flex;flex-wrap:wrap;gap:9px;}
+.bucket-chip{width:55px;height:55px;border-radius:50%;color:white;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;box-shadow:0 3px 9px #25465b12;transition:transform 500ms;}
+.bucket-chip.hot{outline:4px solid #cd9b4b;outline-offset:4px;transform:scale(1.12);}
+/* Conclusion replaces its first state completely with an animated closing cover. */
+.takehomes{position:absolute;left:140px;right:140px;top:260px;display:flex;flex-direction:column;gap:18px;}
+.takehomes article{display:flex;gap:35px;align-items:start;padding:6px 0 16px;border-bottom:1px solid #d6e1e6;opacity:.16;transition:opacity 400ms;}
+.takehomes article>span{font-size:54px;font-weight:300;color:#c28445;line-height:1;}
+.takehomes h3{font-size:34px;margin:0 0 8px;}
+.takehomes p{font-size:25px;line-height:1.35;margin:0;}
+#s20[data-step="0"] [data-take="0"],#s20[data-step="1"] [data-take="0"],#s20[data-step="1"] [data-take="1"],#s20[data-step="2"] .takehomes article{opacity:1;}
+.closing-cover{position:absolute;inset:0;visibility:hidden;opacity:0;transition:opacity 650ms;pointer-events:none;}
+#s20[data-step="3"] .closing-cover{visibility:visible;opacity:1;pointer-events:auto;}
+#s20[data-step="3"]>.top,#s20[data-step="3"]>.line-label,#s20[data-step="3"]>.foot,#s20[data-step="3"]>.irg-seed-note,#s20[data-step="3"] .takehomes,#s20[data-step="3"] .paper-reference{opacity:0;visibility:hidden;}
+.closing-text{position:absolute;left:108px;top:177px;width:540px;}
+.closing-text .eyeline{color:#dea96b;}
+.closing-text h1{white-space:nowrap;font-size:112px;color:#f1f5f6;letter-spacing:-.055em;margin:20px 0 5px;}
+.closing-text h1 span{color:#dca065;}
+.closing-text h3{font-size:40px;color:#adc7d4;font-weight:400;margin-bottom:34px;}
+.closing-text p{font-size:23px;color:#9eb8c6;}
+.closing-text .closing-name{color:#f5f7f9;font-size:29px;font-weight:650;}
+.closing-text a{color:#8dd4d4;display:inline-block;font-size:28px;margin-top:17px;text-decoration:none;border-bottom:1px solid #659ba5;}
+.closing-qr{position:absolute;left:650px;top:432px;width:190px;background:#fff;padding:13px;border-radius:12px;text-decoration:none;box-shadow:0 8px 35px #04142155;}
+.closing-qr svg{width:100%;height:auto;display:block;}.closing-qr span{font-size:17px;color:#2c4c59;display:block;text-align:center;margin-top:6px;}
+.closing-logos{position:absolute;left:104px;right:104px;bottom:91px;background:#ffffffed;border-radius:7px;height:92px;display:flex;align-items:center;justify-content:space-evenly;padding:10px 35px;gap:55px;}
+.closing-logos img{object-fit:contain;max-width:300px;max-height:75px;}
+.closing-affiliations{position:absolute;left:104px;bottom:32px;font-size:18px!important;color:#91aeba!important;margin:0!important;}
+.slide[data-page="20"][data-step="3"]::before{opacity:0;}
+.slide[data-page="20"][data-step="3"]>.ambient,.slide[data-page="20"][data-step="3"]>.micro-grid,.slide[data-page="20"][data-step="3"]>.network-wash{opacity:.7;}
+.slide[data-page="20"][data-step="3"] .network-stage{opacity:.99;visibility:visible;transform:translateX(0) scale(.72);transition:opacity 750ms;}
+/* The closing cover inherits the same node and edge colours as the opening. */
+
+.slide[data-page="20"][data-step="3"] #signals,.slide[data-page="20"][data-step="3"] #anomalies,.slide[data-page="20"][data-step="3"] #glitch-overlay{visibility:visible;}
+/* The 16:9 reference stage scales as a unit; all canvas layouts remain stable. */
+@media(prefers-reduced-motion:reduce){.irg-panel,.irg-graph circle,.matrix-cell,.slot-pointer,.closing-cover{transition:none;}}
+@media print{.aside-link,.demo-play,.return-link,.irg-bottom-line .kbdhint{display:none;}}
+
+#s12 .irg-matrix{width:430px;height:430px;}
+#s12 .irg-workbench{height:450px;}
+#s9 .foot br{display:none;}
+
+.fusion-clocks{position:absolute;inset:0;pointer-events:none;z-index:3;}
+
+
+#s18 .update-select{position:absolute;top:-4px;right:0;margin:0;z-index:2;}
+#s18 .irg-note{font-size:20px;line-height:1.35;}
+#s19 [data-panel="1"] .irg-note{font-size:21px;margin-top:20px;}
+#s19 [data-panel="1"] .mathbox{font-size:26px;margin:18px 0;}
+
+.closing-wordmark{font-size:23px;font-weight:640;line-height:1.2;color:#9a2331;text-align:left;max-width:280px;}
+.closing-wordmark small{display:block;font-size:15px;font-weight:450;color:#676b6d;margin-top:4px;}
+
+/* General theorem/closing screens are not restricted to the ten-vertex example. */
+#s15 .irg-seed-note,#s19 .irg-seed-note,#s20 .irg-seed-note{display:none}
+
+/* Weight-update explanation: the changing normalizer is the global cause. */
+#s16 .normalizer-callout{margin:22px 0 20px;padding:15px 20px;border-left:3px solid #bd843f;background:#fff4df;border-radius:4px;}
+#s16 .normalizer-callout .mathbox{font-size:28px;margin:0;}
+#s16 .normalizer-callout p{font-size:23px;line-height:1.35;margin:12px 0 0;color:#435d70;}
+#s16 [data-panel="3"]>.mathbox{font-size:29px;}
+#s16 [data-panel="3"]>.irg-note{font-size:21px;line-height:1.35;}
+#s17 .coupling-delete h3{color:var(--irg-remove);}
+#s17 .coupling-add h3{color:#12866b;}
+#s17 .irg-status{min-height:52px;line-height:1.35;}
+#s18 .irg-table .deletion-heading{color:var(--irg-remove);}
+#s18 .irg-table .addition-heading{color:#12866b;}
+
+/* Semantic event colors change atomically; removal opacity is scene-driven. */
+#graph16 .irg-graph line,#graph17 .irg-graph line,#graph18 .irg-graph line{transition:none;}
+
+/* v19: dynamic algorithm as a compact, typeset procedure. */
+#s18 [data-panel="3"] h3{font-size:31px;margin-bottom:12px;}
+#s18 #dynamic-update-code{font-size:23px;line-height:1.24;margin:10px 0 12px;padding:12px 12px 12px 45px;}
+#s18 #dynamic-update-code li{padding:2px 0;}
+#s18 #dynamic-update-code .indent-1{padding-left:23px;}
+#s18 #dynamic-update-code .tex{font-size:.91em;}
+#s18 .algorithm-scope{display:none;font-size:21px;line-height:1.4;margin:15px 0 0;padding:15px 18px;border-left:2px solid #cfb490;background:#fffcf6;}
+#s18[data-step="3"] .algorithm-scope{display:block;}
+#edge-array18[hidden]{display:none;}
+.sampler-interface{display:flex;gap:16px;flex-wrap:wrap;color:#7a542d;font-size:25px;margin:23px 0;}
+.sampler-interface>.tex{padding:9px 13px;background:#fff4e2;border:1px solid #e6ceaa;border-radius:6px;}
+/* Four coloured brackets, one single-line formula. Captions are readable text. */
+#s19 .complexity-panel{padding:28px 33px;}
+#s19 .complexity-panel>p{font-size:26px;}
+#s19 .complexity-panel .complexity-equation{font-size:27px;margin:29px 0 30px;white-space:nowrap;}
+#s19 .complexity-equation>.tex{display:block;width:100%;}
+#s19 .complexity-equation svg{display:block;max-width:100%;margin:0 auto;}
+.complexity-key{display:grid;grid-template-columns:1fr 1fr 1.13fr 1.15fr;gap:24px;}
+.complexity-key article{--term-color:#23787e;border-top:3px solid var(--term-color);padding-top:13px;}
+.complexity-key .overhead{--term-color:#52689a;}
+.complexity-key .changes{--term-color:#aa6a28;}
+.complexity-key .heavy{--term-color:#8552a1;}
+.complexity-key h4{font-size:24px;line-height:1.25;margin:0 0 9px;color:var(--term-color);font-weight:700;}
+#s19 .complexity-key p{font-size:22px;line-height:1.35;margin:0;}
+#s19 .complexity-panel .complexity-space{font-size:23px;margin-top:28px;}
+#s19 .complexity-panel>.irg-note{font-size:21px;margin-top:16px;line-height:1.4;}
+/* Reference remains with the scientific conclusions, not on top of the network. */
+.paper-reference{position:absolute;left:140px;right:140px;bottom:91px;border-top:1px solid #cbd9e2;padding-top:16px;}
+.paper-ref-top{display:flex;align-items:center;gap:19px;font-size:17px;font-weight:740;letter-spacing:.08em;color:#92602e;margin-bottom:8px;}
+.paper-ref-top a{font-size:22px;letter-spacing:0;color:#197c83;text-decoration:none;border-bottom:1px solid #86b6ba;}
+.paper-ref-title{font-size:24px;line-height:1.25;font-weight:650;color:#2c4758;}
+.irg-stage .paper-reference p{font-size:20px;line-height:1.3;margin:5px 0 0;}
+.irg-stage .paper-reference .paper-ref-note{font-size:18px;color:#607583;}
+.closing-logos .unipd-logo{width:240px;height:76px;max-width:260px;object-fit:contain;}

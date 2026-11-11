@@ -1,0 +1,21 @@
+<div class="toolbar"><button id="help" title="Help and shortcuts">?</button><button id="reseed">R · RESEED</button><button id="trigger">T · TRIGGER</button><button id="pause">PAUSE</button><span class="seed" id="seedinfo">seed 6040</span></div>
+<div class="nav"><button id="back" aria-label="Previous step">‹</button><span id="counter">00 / 05</span><button id="forward" aria-label="Next step">›</button></div>
+<aside id="network-parameters" class="network-parameters" inert aria-label="Network model parameters" aria-hidden="true">
+  <div class="parameter-heading"><strong>NETWORK MODEL</strong><button type="button" id="params-close" aria-label="Close parameters">×</button></div>
+  <div class="parameter-caption">Zero-temperature GIRG · non-periodic square · d = 2</div>
+  <form id="parameter-form">
+    <label for="tau-input"><span>Power-law exponent <em>τ</em></span><output for="tau-input" id="tau-value">2.70</output></label>
+    <input class="parameter-slider" id="tau-input" type="range" min="2.05" max="3.50" step="0.05" value="2.70" required>
+    <div class="parameter-limits"><span>2.05</span><span>3.50</span></div>
+    <label for="c-input"><span>Geometric constant <em>C</em></span><output for="c-input" id="c-value">0.72</output></label>
+    <input class="parameter-slider" id="c-input" type="range" min="0.05" max="3.00" step="0.01" value="0.72" required>
+    <div class="parameter-limits"><span>0.05</span><span>3.00</span></div>
+    <label for="seed-input"><span>Seed</span></label>
+    <input id="seed-input" type="number" inputmode="numeric" min="0" max="10000" step="1" value="6040" required>
+    <div id="parameter-error" role="alert" class="parameter-error"></div>
+    <button type="submit" class="parameter-apply">Apply settings</button>
+    <p>Press <kbd>R</kbd> for a different network realization.</p>
+  </form>
+</aside>
+<div id="parameter-status" class="parameter-status" role="status" aria-live="polite"></div>
+<div class="helpbox" id="helpbox"><b>SCIENTIFIC TALK CONTROLS</b><br>→ / Space — next reveal or slide<br>← — previous reveal<br>Page Up/Down — switch slides<br>R — new seed · Shift+R — replay seed<br>T — replay current demonstration / special effect<br>Y — parameters and preferred seed<br>↓ — optional detail (Alias / EBUS)<br>↑ — return; → / Space advance optional details<br>P — pause · F — fullscreen<br>H or ? — help</div>

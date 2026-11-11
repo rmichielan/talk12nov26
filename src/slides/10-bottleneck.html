@@ -1,0 +1,42 @@
+<section id="s11" class="stage irg-stage" data-slide="11" data-step="0" aria-label="The computational bottleneck">
+ <div class="line-label">III / EXACT GRAPH GENERATION</div><header class="top"><h2>The computational bottleneck</h2><p class="sub">From a graph to its adjacency matrix &#8212; then to an algorithm.</p></header>
+ <div class="irg-workbench">
+  <div class="irg-bench-left">
+   <div class="irg-panel" data-panel="0,1,2"><div id="graph11" class="graph-host"></div></div>
+   <div class="irg-panel" data-panel="3,4,5">
+    <h3>Naive generation</h3>
+    <ol class="irg-code algorithm-code" id="naive-code">
+     <li><b>for</b> <span class="tex" data-math="i=1,\ldots,n"></span>:</li>
+     <li class="indent-1"><b>for</b> <span class="tex" data-math="j=i+1,\ldots,n"></span>:</li>
+     <li class="indent-2"><b>if</b> <span class="tex" data-math="\operatorname{Bernoulli}(p_{ij})=1"></span>:</li>
+     <li class="indent-3">InsertEdge(<span class="tex" data-math="i,j"></span>)</li>
+    </ol>
+    <div class="mathbox"><span class="tex" data-math="\binom n2\ \text{Bernoulli tests}"></span></div>
+    <p>Visit every candidate pair, even in a sparse graph.</p>
+   </div>
+   <div class="irg-panel" data-panel="6,7" data-bench-panel="sort">
+    <h3>Miller&#8211;Hagberg generation</h3>
+    <p class="sort-instruction">First, sort the weights in decreasing order.</p>
+    <div class="mathbox sort-equation"><span class="tex" data-math="w_{\sigma(1)}\ge\cdots\ge w_{\sigma(n)}"></span></div>
+   </div>
+   <div class="irg-panel" data-panel="7,8,9" data-bench-panel="mh">
+    <h3>Miller&#8211;Hagberg generation</h3>
+    <ol class="irg-code algorithm-code" id="mh-code">
+     <li><b>for</b> <span class="tex" data-math="r=1,\ldots,n-1"></span>:</li>
+     <li class="indent-1"><span class="tex" data-math="s\gets r+1;\quad q\gets p_{\sigma(r)\sigma(s)}"></span></li>
+     <li class="indent-1"><b>while</b> <span class="tex" data-math="s\le n"></span> <b>and</b> <span class="tex" data-math="q&gt;0"></span>:</li>
+     <li class="indent-2"><span class="tex" data-math="Z\sim\operatorname{Geom}_0(q);\quad s\gets s+Z"></span></li>
+     <li class="indent-2"><b>if</b> <span class="tex" data-math="s&gt;n"></span>: <b>break</b></li>
+     <li class="indent-2"><span class="tex" data-math="p\gets p_{\sigma(r)\sigma(s)}"></span></li>
+     <li class="indent-2"><b>if</b> <span class="tex" data-math="\operatorname{Bernoulli}(p/q)=1"></span>:</li>
+     <li class="indent-3">InsertEdge(<span class="tex" data-math="\sigma(r),\sigma(s)"></span>)</li>
+     <li class="indent-2"><span class="tex" data-math="q\gets p;\quad s\gets s+1"></span></li>
+    </ol>
+    <p class="irg-note">Chung&#8211;Lu &#183; sorted vertex labels <span class="tex" data-math="\sigma"></span></p>
+   </div>
+   <div class="irg-panel" data-panel="10"><div class="irg-question">Can we generate the graph without traversing the entire adjacency matrix?</div></div>
+  </div>
+  <div class="irg-bench-right"><div id="matrix11"></div><div class="visually-hidden" id="status11" role="status" aria-live="polite"></div></div>
+ </div>
+ <footer class="foot"><strong>10</strong> / THE COMPUTATIONAL BOTTLENECK</footer>
+</section>
