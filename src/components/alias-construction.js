@@ -61,11 +61,11 @@ const AliasConstruction=(()=>{
   initial(){this.paint(0);this.status.textContent='Column heights are the normalised weights; the dashed line is 1.';this.root.dataset.aliasPhase='initial';this.root.dataset.running='false';}
   first(){
    this.root.dataset.aliasPhase='first-transfer';this.root.dataset.running='true';
-   IRGScenes.play(3.6,f=>{this.transfer(1,Math.max(0,Math.min(1,(f-.12)/.75)));if(f===1){this.root.dataset.running='false';this.root.dataset.aliasPhase='first-hold';}});
+   IRGScenes.play(2.0,f=>{this.transfer(1,Math.max(0,Math.min(1,(f-.12)/.75)));if(f===1){this.root.dataset.running='false';this.root.dataset.aliasPhase='first-hold';}});
   }
   rest(){
    const count=this.d.alias.states.length-1,remaining=count-1;this.root.dataset.aliasPhase='construction';this.root.dataset.running='true';
-   IRGScenes.play(Math.max(1,remaining*1.45),f=>{
+   IRGScenes.play(Math.max(1,remaining*0.8),f=>{
     if(f===1){this.paint(count,null,null,true);this.status.textContent='All ten columns have height 1. The tables q and A are ready.';this.root.dataset.aliasPhase='complete';this.root.dataset.running='false';return;}
     const z=f*remaining,index=2+Math.floor(z),part=z-Math.floor(z);this.transfer(index,Math.max(0,Math.min(1,(part-.08)/.8)));
    });
