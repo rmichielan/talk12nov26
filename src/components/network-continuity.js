@@ -64,12 +64,12 @@
       const {top,bottom}=areas();
       $('#slide').dataset.handoff='running';$('#slide').dataset.splitPhase='separating';
       $('#slide').dataset.graphTransition='splitting';
-      move(a(),initial,top,1600);move(b(),initial,bottom,1600);
-      run(1600,()=>{},()=>{
+      move(a(),initial,top,1000);move(b(),initial,bottom,1000);
+      run(1000,()=>{},()=>{
         commit(a(),top);commit(b(),bottom);model=0;captured=null;
         $('#slide').dataset.splitPhase='separated';$('#slide').dataset.handoff='framed';
         // Frames and labels appear only after the two copies have arrived.
-        run(500,()=>{},()=>{$('#slide').dataset.handoff='done';});
+        run(500,()=>{},()=>{$('#slide').dataset.handoff='done';morph(1);});
       });
     }
     function settleCards(value=0){
@@ -84,7 +84,7 @@
       const fromA=first.state,fromB=second.state;
       const toA=first.target(value?'pop':'source'),toB=second.target(value?'geo':'source');
       const start=model;$('#slide').dataset.graphTransition='model-morph';
-      run(1350,(t)=>{model=start+(value-start)*t;first.interpolate(fromA,toA,t);second.interpolate(fromB,toB,t);},()=>{model=value;});
+      run(600,(t)=>{model=start+(value-start)*t;first.interpolate(fromA,toA,t);second.interpolate(fromB,toB,t);},()=>{model=value;});
     }
     function enterSingle(page,oldPage){
       // Slide changes are scene cuts, not a travelling panel. The SAME SVG and
@@ -98,17 +98,9 @@
       b().style.opacity='0';a().style.opacity='1';
       const source=first.target('source');
       if(wasOverview && page===3 && model>0.001){
-        // Slide 2 ends with a Chung-Lu copy (and an RGG copy). We arrive at
-        // slide 3 with GIRG node positions immediately, but make the *edges*
-        // change gradually from the Chung-Lu connectivity to the GIRG. No
-        // screen-crossing translation, no replacement SVG, no extra topology.
-        const initial={nodes:source.nodes,edges:previous.edges.map(edge=>({...edge}))};
-        first.paint(initial);
-        $('#slide').dataset.graphTransition='restore-girg';
+        first.paint(source);
+        model=0;
         first.annotations(page);
-        run(700,t=>first.interpolate(initial,source,t),()=>{
-          first.paint(source);model=0;
-        });
         return;
       }
       first.paint(source);model=0;first.annotations(page);
@@ -121,7 +113,7 @@
       if(step===1&&oldPage===2&&oldStep===0){split();return;}
       if(step===2&&oldPage===2&&oldStep===1){
         if(overlay().style.visibility!=='visible')settleCards(0);
-        $('#slide').dataset.handoff='done';morph(1);return;
+        $('#slide').dataset.handoff='done';if(model<1)morph(1);return;
       }
       if(step===1&&oldPage===2&&oldStep===2){morph(0);return;}
       settleCards(step===2?1:0);

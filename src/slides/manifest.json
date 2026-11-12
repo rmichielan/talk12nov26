@@ -24,7 +24,7 @@
     "id": 4,
     "name": "03-detection",
     "key": "inference",
-    "reveals": 3,
+    "reveals": 2,
     "controller": "controller_03_detection"
   },
   {

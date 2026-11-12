@@ -153,7 +153,7 @@
     const t=temporal.now;
     $('#time-cursor').style.left=(100*t/temporalEnd).toFixed(3)+'%';
     $('#time-current').textContent='t = '+t.toFixed(1)+' s';
-    if(!temporal.stopped)$('#time-status').textContent='CLOCK · MEAN 1.5 s · INTERVAL 0.8–2.5 s';
+    if(!temporal.stopped)$('#time-status').textContent='CLOCK · MEAN 1.5 s';
   }
   function temporalFrame(now){
     if(slide!==5||paused||document.hidden){temporalRaf=null;return;}

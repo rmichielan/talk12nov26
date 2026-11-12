@@ -44,7 +44,7 @@
 .s6[data-step="1"] .paine-expansion{font-size:28px;color:#3d6d72;margin:6px 0 0;}
 .s6[data-step="1"] .paine-cover-hook{opacity:0;transform:translateY(-20px);}
 .s6[data-step="1"] .paine-graphic{left:72%;top:33%;width:21%;height:29%;}
-.s6[data-step="1"] .paine-graphic .paine-art-caption{color:#4f8278;font-size:16px;letter-spacing:.035em;white-space:normal;line-height:1.35;}
+.s6[data-step="1"] .paine-graphic .paine-art-caption{color:#4f8278;font-size:14px;letter-spacing:.035em;white-space:normal;line-height:1.35;}
 .s6[data-step="1"] .paine-edge-base{stroke:#668b90;stroke-opacity:.58;}
 .s6[data-step="1"] .paine-node-base{fill:#648f94;}
 .s6[data-step="1"] .paine-edge-signal{stroke:#2c9475;}
